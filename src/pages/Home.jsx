@@ -70,7 +70,7 @@ function Home() {
 
   return (
     <section style={sectionStyle}>
-      <div style={containerStyle}>
+      <div style={containerStyle} className='home-container'>
         <div>
           <h1 style={titleStyle}>Привет, я Никита</h1>
           <p style={textStyle}>
@@ -78,7 +78,7 @@ function Home() {
             на React и Django. Люблю чистый код и красивые интерфейсы.
           </p>
           
-          <div style={skillsStyle}>
+          <div style={skillsStyle} className='skills-tags'>
             <span style={skillTagStyle}>React</span>
             <span style={skillTagStyle}>Django</span>
             <span style={skillTagStyle}>JavaScript</span>
@@ -96,7 +96,7 @@ function Home() {
           <img 
             src="https://i.pravatar.cc/400?u=nikita" 
             alt="Никита" 
-            style={imageStyle}
+            style={imageStyle} className='home-image'
           />
         </div>
       </div>

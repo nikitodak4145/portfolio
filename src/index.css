@@ -30,3 +30,86 @@ body {
 .fade-in {
   animation: fadeIn 0.5s ease-out forwards;
 }
+/* ===== АДАПТАЦИЯ ПОД ТЕЛЕФОНЫ ===== */
+@media (max-width: 768px) {
+  /* Главная страница */
+  .home-container {
+    grid-template-columns: 1fr !important;
+    text-align: center !important;
+    gap: 2rem !important;
+  }
+
+  .home-image {
+    order: -1 !important; /* картинка сверху */
+    max-width: 300px !important;
+    margin: 0 auto !important;
+  }
+
+  .skills-tags {
+    justify-content: center !important;
+  }
+
+  /* Навигация */
+  nav {
+    padding: 0 1rem !important;
+  }
+
+  .nav-links {
+    gap: 1rem !important;
+  }
+
+  .nav-links a {
+    font-size: 0.9rem !important;
+  }
+
+  /* Страница проектов */
+  .projects-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+
+  /* Страница контактов */
+  .contacts-grid {
+    grid-template-columns: 1fr !important;
+    max-width: 400px !important;
+    margin: 0 auto !important;
+  }
+
+  /* Общие отступы */
+  section {
+    padding: 3rem 1rem !important;
+  }
+
+  h1 {
+    font-size: 2rem !important;
+  }
+
+  h2 {
+    font-size: 2rem !important;
+  }
+
+  p {
+    font-size: 1rem !important;
+  }
+}
+
+/* Для очень маленьких экранов (до 480px) */
+@media (max-width: 480px) {
+  .nav-links {
+    gap: 0.5rem !important;
+  }
+
+  .nav-links a {
+    font-size: 0.8rem !important;
+    padding: 0.25rem 0.5rem !important;
+  }
+
+  .card {
+    padding: 1rem !important;
+  }
+
+  .button {
+    padding: 0.5rem 1rem !important;
+    font-size: 0.9rem !important;
+  }
+}
