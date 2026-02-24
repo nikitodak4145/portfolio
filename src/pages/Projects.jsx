@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import projects from '../data/projects';
 
 function Projects(){
@@ -62,12 +61,11 @@ function Projects(){
         <h2 style={titleStyle}>Мои проекты</h2>
         <div style={gridStyle}>
           {projects.map((project, index) => (
-            <div 
-              style={{ ...cardStyle, animationDelay: `${index * 0.1}s` }}
-              key={project.title} 
-              style={cardStyle}
-              className="fade-in"
-            >
+           <div 
+  key={project.title} 
+  style={{ ...cardStyle, animationDelay: `${index * 0.1}s` }} 
+  className="fade-in"
+>
               <h3>{project.title}</h3>
               <p>{project.description}</p>
               <div style={techStyle}>
