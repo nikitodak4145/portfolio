@@ -11,7 +11,7 @@ const projects = [
     description: "Сайт для свадебного организатора. Адаптивный, с роутингом и анимациями. Чистый фронтенд.",
     tech: ["React", "React Router", "CSS"],
     github: "https://github.com/nikitodak4145/-wedding-site",
-    live: "https://wedding-site-zrmz.vercel.app"
+    live: "https://wedding-site-zz3w.vercel.app/"
   }
 ];
 
