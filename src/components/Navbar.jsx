@@ -1,12 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import {
+  navbarLinks,
+  navbarLink,
+  navbarLogo,
+  navbarLogoContainer
+} from '../styles/globalStyles';
 
 function Navbar() {
-   const navStyle = {
+  const navStyle = {
     height: '70px',
-    background: 'white',
-    boxShadow: '0 2px 10px rgba(0,0,0,0.1)',
+    background: 'rgba(255, 255, 255, 0.9)',
+    backdropFilter: 'blur(10px)',
+    boxShadow: '0 2px 20px rgba(0,0,0,0.05)',
     position: 'fixed',
     top: 0,
     width: '100%',
@@ -14,37 +20,19 @@ function Navbar() {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    padding: '0 2rem'
-  }
-
-    const linksStyle = {
-    display: 'flex',
-    gap: '2rem'
+    padding: '0 2rem',
+    transition: 'all 0.3s ease'
   };
 
-  const linkStyle = {
-    textDecoration: 'none',
-    color: '#333',
-    fontWeight: '500'
-  };
-
-  const logoStyle = {
-    width: '40px'
-  }
-
-  const logoContainerStyle = {
-    display: 'flex',
-    alignItems: 'center'
-  }
   return (
     <nav style={navStyle}>
-      <div style={logoContainerStyle}>
-        <img src="/images/image.png" alt="logo" style={logoStyle} />
+      <div style={navbarLogoContainer}>
+        <img src="/images/image.png" alt="logo" style={navbarLogo} />
       </div>
-      <div style={linksStyle}>
-        <Link to="/" style={linkStyle}>Главная</Link>
-        <Link to="/projects" style={linkStyle}>Проекты</Link>
-        <Link to="/contact" style={linkStyle}>Контакты</Link>
+      <div style={navbarLinks}>
+        <Link to="/" style={navbarLink} className="nav-link">Главная</Link>
+        <Link to="/projects" style={navbarLink} className="nav-link">Проекты</Link>
+        <Link to="/contact" style={navbarLink} className="nav-link">Контакты</Link>
       </div>
     </nav>
   );

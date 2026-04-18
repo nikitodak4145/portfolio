@@ -1,111 +1,76 @@
 import React from 'react';
+import ContactForm from '../components/ContactForm';
+import {
+  contactSection,
+  contactContainer,
+  contactTitle,
+  contactText,
+  contactGrid,
+  contactCard,
+  contactCardTitle,
+  contactLink,
+} from '../styles/globalStyles';
 
 function Contact() {
-  const sectionStyle = {
-    minHeight: '100vh',
-    padding: '4rem 2rem',
-    backgroundColor: '#f8fafc'
-  };
-
-  const containerStyle = {
-    maxWidth: '800px',
-    margin: '0 auto',
-    textAlign: 'center'
-  };
-
-  const titleStyle = {
-    fontSize: '2.5rem',
-    marginBottom: '1rem',
-    color: '#0f172a',
-    fontWeight: '600'
-  };
-
-  const textStyle = {
-    fontSize: '1.2rem',
-    color: '#475569',
-    marginBottom: '3rem'
-  };
-
-  const gridStyle = {
-    display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-    gap: '2rem',
-    marginTop: '2rem'
-  };
-
-  const cardStyle = {
-    backgroundColor: 'white',
-    padding: '1.5rem',
-    borderRadius: '0.75rem',
-    boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)',
-    transition: 'transform 0.2s, box-shadow 0.2s',
-    cursor: 'pointer'
-  };
-
-  const cardTitleStyle = {
-    fontSize: '1.25rem',
-    marginBottom: '1rem',
-    color: '#0f172a',
-    fontWeight: '600'
-  };
-
-  const linkStyle = {
-    display: 'inline-block',
-    padding: '0.5rem 1rem',
-    backgroundColor: '#3b82f6',
-    color: 'white',
-    textDecoration: 'none',
-    borderRadius: '0.375rem',
-    fontWeight: '500',
-    transition: 'background-color 0.2s, transform 0.2s',
-    cursor: 'pointer'
-  };
-
-  const textMutedStyle = {
-    color: '#475569',
-    fontSize: '1rem',
-    wordBreak: 'break-all'
+  // Стили для иконок (можно добавить через CSS классы позже)
+  const iconStyle = {
+    fontSize: '2rem',
+    marginBottom: '0.5rem',
+    display: 'block'
   };
 
   return (
-    <section style={sectionStyle}>
-      <div style={containerStyle}>
-        <h2 style={titleStyle}>Контакты</h2>
-        <p style={textStyle}>
-          Свяжитесь со мной любым удобным способом
+    <section style={contactSection}>
+      <div style={contactContainer}>
+        <h2 style={contactTitle} className="gradient-text">Свяжитесь со мной</h2>
+        <p style={contactText} className="reveal">
+          Буду рад новым знакомствам и интересным проектам
         </p>
         
-        <div style={gridStyle}>
-          <div style={cardStyle}>
-            <h3 style={cardTitleStyle}>GitHub</h3>
+        {/* Контакты в две колонки */}
+        <div style={contactGrid}>
+          {/* GitHub */}
+          <div style={contactCard} className="scale-in contact-card">
+            <span style={iconStyle}></span>
+            <h3 style={contactCardTitle}>GitHub</h3>
             <a 
               href="https://github.com/nikitodak4145" 
               target="_blank" 
               rel="noopener noreferrer"
-              style={linkStyle}
+              style={contactLink}
+              className="contact-link"
             >
-              nikitodak4145
+              @nikitodak4145
             </a>
+            <p style={{ fontSize: '0.9rem', color: '#94a3b8', marginTop: '0.5rem' }}>
+              Код моих проектов
+            </p>
           </div>
 
-          
-
-          <div style={cardStyle}>
-            <h3 style={cardTitleStyle}>Telegram</h3>
+          {/* Telegram */}
+          <div style={contactCard} className="scale-in contact-card">
+            <span style={iconStyle}></span>
+            <h3 style={contactCardTitle}>Telegram</h3>
+           
             <a 
-              href="https://t.me/barbos_n455" 
+              href="https://t.me/nikitakul_portfolio_bot" 
               target="_blank" 
               rel="noopener noreferrer"
-              style={linkStyle}
+              style={contactLink}
+              className="contact-link"
             >
               @barbos_n455
             </a>
-          </div>
-          <div style={cardStyle}>
-            <h3 style={cardTitleStyle}>Телефон</h3>
-            <p style={textMutedStyle}>+375(29)777-46-31</p>
+            <p style={{ fontSize: '0.9rem', color: '#94a3b8', marginTop: '0.5rem' }}>
+              Быстрая связь
+            </p>
           </div>
         </div>
+
+
+
+        {/* Форма обратной связи */}
+        <ContactForm />
       </div>
     </section>
   );
