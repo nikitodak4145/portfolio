@@ -1,40 +1,28 @@
 const projects = [
   {
-    title: "my-first-react",
-    description: "Моё первое React-приложение, интегрированное с Django API.",
-    tech: ["React", "Django", "DRF", "SQLite"],
-    github: "https://github.com/nikitodak4145/my-first-react",
-    live: "https://my-django-blog.vercel.app",
-
-  },
-  {
-    title: "wedding-site",
-    description: "Сайт для свадебного организатора. Адаптивный, с роутингом и анимациями.",
+    id: 1,
+    title: "Свадебный сайт",
+    description: "Сайт для свадебного организатора. Адаптивный, с роутингом, анимациями и Telegram-ботом.",
     tech: ["React", "React Router", "CSS"],
-    github: "https://github.com/nikitodak4145/-wedding-site",
-    live: "https://wedding-site-zrmz.vercel.app",
-   
+    github: "https://github.com/nikitodak4145/wedding-site",
+    live: "https://wedding-site-zrmz.vercel.app"
   },
-   {
-    title: "gitman_base",
-    description: "Сайт создавался во время международного хакатона FUNCODE",
-    tech: ["Django", "SQLite", "CSS"],
-    github: "https://github.com/nikitodak4145/gitman_base",
-  },
-     {
-    title: "Мебельный интернет магазин",
-    description: "Интернет магазин на основе реальных мебельных товаров с релизованным поиском и сортировкой",
-    tech: ["React", "Vite", "CSS"],
-    github: "https://github.com/nikitodak4145/first_shop",
-  },
-     {
-    title: "Ковалев Стефан Андреевич",
-    description: "60р в час, лтбой минетик за омлетик",
-    tech: ["минет", "куни", "оральный секс"],
-    github: "https://web.telegram.org/k/#@kencst0",
-  },
-  
-
+{
+  id: 2,
+  title: "Хранитель Семени",
+  description: "Сайт для хакатона про супергероя-программиста. Сила Семени, способности, лог битв, Telegram-бот.",
+  tech: ["React", "Django", "DRF", "SQLite"],
+  github: "https://github.com/nikitodak4145/gitman_base",
+  live: "https://nikitosik2235353.pythonanywhere.com"
+},
+  {
+    id: 3,
+    title: "Интернет-магазин",
+    description: "Полноценный интернет-магазин на React с корзиной, фильтрами, роутингом и Material UI.",
+    tech: ["React", "React Router", "Material UI", "CSS"],
+    github: "https://github.com/nikitodak4145/first_shop"
+    // live нет — ссылка не появится
+  }
 ];
 
 export default projects;
