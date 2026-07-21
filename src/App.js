@@ -4,7 +4,7 @@ import Home from './pages/Home';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 import './index.css';
-import { initReveal } from './utils/reveal';
+// import { initReveal } from './utils/reveal';
 
 function App() {
   return (
