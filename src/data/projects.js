@@ -5,7 +5,7 @@ const projects = [
     description: "Сайт для свадебного организатора. Адаптивный, с роутингом, анимациями и Telegram-ботом.",
     tech: ["React", "React Router", "CSS"],
     github: "https://github.com/nikitodak4145/wedding-site",
-    live: "https://wedding-site-zrmz.vercel.app"
+    live: "https://wedding-site-gb6w.vercel.app"
   },
 {
   id: 2,
@@ -20,7 +20,8 @@ const projects = [
     title: "Интернет-магазин",
     description: "Полноценный интернет-магазин на React с корзиной, фильтрами, роутингом и Material UI.",
     tech: ["React", "React Router", "Material UI", "CSS"],
-    github: "https://github.com/nikitodak4145/first_shop"
+    github: "https://github.com/nikitodak4145/first_shop",
+    live: "https://first-shop-iota.vercel.app/"
     // live нет — ссылка не появится
   }
 ];
